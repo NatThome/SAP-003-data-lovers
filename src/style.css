@@ -1,40 +1,109 @@
-.Logo{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.rodape{
+    margin: 50px;
+}
+
+.logo{  
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    font-size: 80px;
-    font-family: cursive;
-    color:yellow
+    margin-top: 20px;
 }
+
+#root{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.show{
+    margin-top: -20px;
+}
+
 .card{
     width: 150px;
-    height: 150px;
+    height: 200px;
     display: inline-block;
     padding: 20px;
-    border:yellow;
+    border:rgb(255, 136, 0);
     border-style: solid;
     border-radius: 10px;
-    transform: translate3d(40px, 50px, 50px);
+    transform: translate3d(70px, 50px, 50px);
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.623);
+    opacity: 95%;
 }
-.card h2{
-    font-size: 1.2em;
+.name{
+    font-size: 15px;
+    font-family: cursive;
 }
+
+.id{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.type{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+ 
 .search{
-    width: 500px;
+    width: 280px;
     height: 35px;
     border-radius: 10px;
-    transform: translate(50%, 20%)
 }
-.optionFilter{
-    width: 150px;
+
+.option{
+    width: 180px;
     height: 35px;
     border-radius: 10px;
-    transform: translate(200%, 20%)
-} 
+}
+
 .body{
-    background-image: url(pokemon-go-teams.jpg);
-    background-repeat: no-repeat;
+    background: url(images/times-pokemon.png);
     background-attachment: fixed;
+    background-size: 100%;
 }
+ 
+.calculo{
+    padding: 20px;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    font-style: bold;
+    color: rgb(255, 82, 14);
+    margin-inline-start: 220px;
+    margin-inline-end: 220px;
+    margin-top: 30px;
+}
+
+@media (max-width: 300px){
+    .root{
+        transform: translate(-40%, 10%);
+    }
+    .search{
+        width: 80%;
+    }
+    .card{
+       display: block;
+       width: 60%;
+    }
+    .optionEgg{
+        width: 40%;
+        transform: translate(100%, 50%);
+    }
+    .optionFilter{
+        width: 40%;
+        transform: translate(100%, 40%); 
+    }
+    .optionOrder{
+        width: 40%;
+        transform: translate(100%, 60%);
+    }
+    }
