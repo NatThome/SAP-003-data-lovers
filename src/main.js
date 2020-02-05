@@ -3,7 +3,7 @@ const filtro = document.getElementById("optionFilter");
 const show = document.getElementById("show");
 const order = document.getElementById("optionOrder");
 const search = document.getElementById("search");
-const ovo = document.getElementById("optionOvo");
+const egg = document.getElementById("optionOvo");
 const statistic = document.getElementById("calculo");
 
 window.onload = () => {
@@ -55,9 +55,9 @@ order.addEventListener("change", (oOrder) => {
   listPoke(ord);
 });
 
-ovo.addEventListener("change", (e) => {
+egg.addEventListener("change", (e) => {
   const poke = pokemons.slice(0, 151);
-  const filterEgg = app.listOvo(poke, e.target.value);
-  statistic.innerHTML = `${app.fstatic(app.listOvo(poke, ovo.value))} % de Pokémons nascem no ovo de ${ovo.value}`;
+  const filterEgg = app.listEgg(poke, e.target.value);
+  statistic.innerHTML = `${app.fstatic(app.listEgg(poke, egg.value))} % de Pokémons nascem no ovo de ${egg.value}`;
   listPoke(filterEgg);
 });
