@@ -1,5 +1,9 @@
 function listTypes (pokemons, typeParametro) {
-  return pokemons.filter(poke => poke.type.includes(typeParametro));
+  if (typeParametro !== "none"){
+    return pokemons.filter(poke => poke.type.includes(typeParametro));
+  }else {
+    document.location.reload(true);
+  }  
 }
 
 function listText(pokemons, text) {
@@ -18,7 +22,7 @@ function listOrder(pokemons, Orde) {
   }
 }
 
-function listOvo (pokemons, egg) {
+function listEgg (pokemons, egg) {
   if (egg === "ovo") {
     return pokemons.filter(poke => !poke.egg.includes("Not in Eggs"));
   }
@@ -44,6 +48,6 @@ app = {
   listTypes,
   listText,
   listOrder,
-  listOvo,
+  listEgg,
   fstatic
 };
